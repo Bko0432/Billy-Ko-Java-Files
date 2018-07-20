@@ -1,0 +1,252 @@
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionListener;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class GUI extends JFrame {
+private JPanel LeftPanel = new JPanel();
+private JPanel MainPanel = new JPanel();
+private JPanel TopLeft = new JPanel();
+private JPanel BottomLeft = new JPanel();
+private JPanel MiddleLeft = new JPanel();
+private JLabel Search = new JLabel();
+private JLabel AddSong = new JLabel();
+private JLabel Delete = new JLabel();
+private JLabel SearchResults = new JLabel();
+private JList <String> Results = new JList();
+private JTextField SearchField = new JTextField();
+private JTextField Title = new JTextField();
+private JTextField Genre = new JTextField();
+private JTextField Artist = new JTextField();
+private JTextField SongID = new JTextField();
+private JButton SearchButton = new JButton();
+private JButton Add = new JButton();
+private JButton DeleteButton = new JButton();
+private JLabel blank = new JLabel();
+private JLabel blank2 = new JLabel();
+
+
+public GUI(){
+	setTitle("MP3 Database");
+	setDefaultCloseOperation(EXIT_ON_CLOSE);
+	setLayout(new BorderLayout());
+	setResizable(true);
+	setSize(700,500);
+	add(LeftPanel, BorderLayout.WEST);
+	add(MainPanel, BorderLayout.CENTER);
+//Left Panel
+LeftPanel.setLayout(new BorderLayout());
+LeftPanel.add(TopLeft, BorderLayout.NORTH);
+LeftPanel.add(BottomLeft, BorderLayout.SOUTH);
+LeftPanel.add(MiddleLeft, BorderLayout.CENTER);
+
+//Top Left Panel
+TopLeft.setLayout(new GridLayout(2,3));
+TopLeft.add(Search);
+TopLeft.add(blank2);
+TopLeft.add(SearchField);
+TopLeft.add(SearchButton);
+Search.setText("Search");
+SearchButton.setText("Search");
+//Middle Left Panel 
+MiddleLeft.setLayout(new GridLayout(5,1));
+MiddleLeft.add(AddSong);
+AddSong.setText("Add Song");
+MiddleLeft.add(Title);
+Title.setText("Title");
+Title.setToolTipText("Title of the Song");
+MiddleLeft.add(Genre);
+Genre.setText("Genre");
+Genre.setToolTipText("Genre of the Song");
+MiddleLeft.add(Artist);
+Artist.setToolTipText("Singer");
+Artist.setText("Singer");
+MiddleLeft.add(Add);
+Add.setText("Add");
+
+// Bottom Left Panel
+BottomLeft.setLayout(new GridLayout(2,3));
+BottomLeft.add(Delete);
+Delete.setText("Delete");
+BottomLeft.add(blank);
+BottomLeft.add(SongID);
+SongID.setToolTipText("Enter Song ID");
+BottomLeft.add(DeleteButton);
+DeleteButton.setText("Delete");
+
+// Main Panel
+MainPanel.setLayout(new BorderLayout());
+MainPanel.add(SearchResults, BorderLayout.NORTH);
+SearchResults.setText("Search Result");
+MainPanel.add(Results, BorderLayout.CENTER);
+}
+
+public void addSearch(ActionListener FP){
+	 SearchButton.addActionListener(FP);
+	}
+
+public void addAdd(ActionListener FP){
+	 Add.addActionListener(FP);
+	}
+
+public void addDelete(ActionListener FP){
+	 DeleteButton.addActionListener(FP);
+	}
+	
+public void setResultList(String[] listModel)
+{
+	Results.setListData(listModel);;
+}
+
+public JPanel getLeftPanel() {
+	return LeftPanel;
+}
+
+public void setLeftPanel(JPanel leftPanel) {
+	LeftPanel = leftPanel;
+}
+
+public JPanel getMainPanel() {
+	return MainPanel;
+}
+
+public void setMainPanel(JPanel mainPanel) {
+	MainPanel = mainPanel;
+}
+
+public JPanel getTopLeft() {
+	return TopLeft;
+}
+
+public void setTopLeft(JPanel topLeft) {
+	TopLeft = topLeft;
+}
+
+public JPanel getBottomLeft() {
+	return BottomLeft;
+}
+
+public void setBottomLeft(JPanel bottomLeft) {
+	BottomLeft = bottomLeft;
+}
+
+public JPanel getMiddleLeft() {
+	return MiddleLeft;
+}
+
+public void setMiddleLeft(JPanel middleLeft) {
+	MiddleLeft = middleLeft;
+}
+
+public JLabel getSearch() {
+	return Search;
+}
+
+public void setSearch(JLabel search) {
+	Search = search;
+}
+
+public JLabel getAddSong() {
+	return AddSong;
+}
+
+public void setAddSong(JLabel addSong) {
+	AddSong = addSong;
+}
+
+public JLabel getDelete() {
+	return Delete;
+}
+
+public void setDelete(JLabel delete) {
+	Delete = delete;
+}
+
+public JLabel getSearchResults() {
+	return SearchResults;
+}
+
+public void setSearchResults(JLabel searchResults) {
+	SearchResults = searchResults;
+}
+
+public JList<String> getResults() {
+	return Results;
+}
+
+public void setResults(JList<String> results) {
+	Results = results;
+}
+
+public JTextField getSearchField() {
+	return SearchField;
+}
+
+public void setSearchField(JTextField searchField) {
+	SearchField = searchField;
+}
+
+public JTextField getTitleField() {
+	return Title;
+}
+
+public void setTitle(JTextField title) {
+	Title = title;
+}
+
+public JTextField getGenre() {
+	return Genre;
+}
+
+public void setGenre(JTextField genre) {
+	Genre = genre;
+}
+
+public JTextField getArtist() {
+	return Artist;
+}
+
+public void setArtist(JTextField artist) {
+	Artist = artist;
+}
+
+public JTextField getSongID() {
+	return SongID;
+}
+
+public void setSongID(JTextField songID) {
+	SongID = songID;
+}
+
+public JButton getSearchButton() {
+	return SearchButton;
+}
+
+public void setSearchButton(JButton searchButton) {
+	SearchButton = searchButton;
+}
+
+public JButton getAdd() {
+	return Add;
+}
+
+public void setAdd(JButton add) {
+	Add = add;
+}
+
+public JButton getDeleteButton() {
+	return DeleteButton;
+}
+
+public void setDeleteButton(JButton deleteButton) {
+	DeleteButton = deleteButton;
+}
+
+}

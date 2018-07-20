@@ -1,0 +1,50 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.DefaultListModel;
+
+
+public class Logic {
+private GUI g;
+private ArrayList<MP3> database = new ArrayList();
+private DefaultListModel<String> details = new DefaultListModel();
+private MP3 song;
+public Logic(GUI g){
+	this.g = g;
+	g.addAdd(new AddListener());
+	g.addSearch(new SearchListener());
+	g.addDelete(new RemoveListener());
+}
+
+class SearchListener implements ActionListener{
+	public void actionPerformed(ActionEvent e){
+		details = new DefaultListModel();
+		for(int x = 0; x < database.size(); x++)
+		{
+			details.addElement(x +" "+ database.get(x).changeToString());
+		}
+		g.setResultList(details);	
+		}
+	
+}
+
+class AddListener implements ActionListener{
+	public void actionPerformed(ActionEvent e){
+		System.out.println("It Adds");
+		song = new MP3();
+		song.setArtist(g.getArtist().getText());
+		song.setGenre(g.getGenre().getText());
+		song.setTitle(g.getTitleField().getText());
+		database.add(song);
+		System.out.println("It Adds");
+	}
+}
+
+class RemoveListener implements ActionListener{
+	public void actionPerformed(ActionEvent e){
+		
+	}
+}
+}
+

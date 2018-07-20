@@ -1,0 +1,7 @@
+#Functions
+def Rois(one, *two):
+    return (one + sum(two))
+
+print(Rois(1))
+print(Rois(2))
+

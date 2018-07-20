@@ -1,0 +1,79 @@
+package base;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.SwingConstants;
+
+public class GUI0 extends JFrame{
+
+	private JButton btnGo;
+
+	/**
+	 * Create the application.
+	 */
+	public GUI0() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(GUI0.class.getResource("/Imgs/logo_blueprint.ico")));
+		initialize();
+		
+	}
+
+	
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		
+		setBounds(0, 0, 1000, 750);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		getContentPane().setLayout(null);
+	
+		
+		JLabel background;
+		try {
+			background = new JLabel(new ImageIcon(ImageIO.read(new File("C:/Users/Billy/Desktop/Computer Science/SENIOR YEAR Brent/IA Android to Java Project/Pictures for the Physics Calculator Program/newtonscradle.jpg"))));
+			setContentPane(background);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		JLabel lblNewLabel = new JLabel("Welcome to The IB Physics Calculator ");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
+		lblNewLabel.setBounds(261, 420, 460, 71);
+		getContentPane().add(lblNewLabel);
+		
+		btnGo = new JButton("Go");
+		btnGo.setBounds(419, 523, 125, 50);
+		getContentPane().add(btnGo);
+		
+		JLabel lblIcon = new JLabel();
+		try {
+		lblIcon = new JLabel(new ImageIcon(ImageIO.read(new File("C:/Users/Billy/Desktop/Computer Science/SENIOR YEAR Brent/IA Android to Java Project/Pictures for the Physics Calculator Program/dp-programme-logo-en2.png"))));
+		lblIcon.setBounds(138, 73, 709, 228);
+		
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		getContentPane().add(lblIcon);
+
+	}
+	public void addNextPage(ActionListener nextPage){
+		btnGo.addActionListener(nextPage);
+		}
+	
+}

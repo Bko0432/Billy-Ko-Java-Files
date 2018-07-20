@@ -1,0 +1,20 @@
+
+public class LogicTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String x;
+String y;
+for(int y = 0; y < 5; y++){
+if(y % 2 == 0){
+	
+	System.out.println("yy");
+}
+else {
+	
+}
+}
+}
+	}
+
+

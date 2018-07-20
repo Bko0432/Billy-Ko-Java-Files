@@ -1,0 +1,11 @@
+
+public class Logic {
+private GUI g;
+
+public Logic(GUI g){
+	this.g = g;
+}
+
+	}
+
+

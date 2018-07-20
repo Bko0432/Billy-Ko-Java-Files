@@ -1,0 +1,15 @@
+
+public class UVA11172 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int t = 3;
+		int a = 2;
+		
+	
+		System.out.println(t+a);
+				
+		
+	}
+}

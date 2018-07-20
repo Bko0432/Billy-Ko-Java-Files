@@ -1,0 +1,228 @@
+
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.BevelBorder;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.awt.event.ActionEvent;
+import java.awt.Font;
+import javax.swing.JTextArea;
+
+public class Loan_Systems {
+
+	private JFrame frame;
+	private JTextField txtInterestRate;
+	private JTextField txtNumberOfYears;
+	private JTextField txtAmountOfLoan;
+	private JTextField txtMonthlyPayment;
+	private JTextField txtTotalPayment;
+	private JTextArea txtReceipt;
+	
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Loan_Systems window = new Loan_Systems();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Loan_Systems() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(0, 0, 1000, 700);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel.setBounds(45, 42, 636, 82);
+		frame.getContentPane().add(panel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Loan Management Systems");
+		lblNewLabel_1.setFont(new Font("Lucida Grande", Font.BOLD, 30));
+		panel.add(lblNewLabel_1);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel_1.setBounds(45, 513, 733, 82);
+		frame.getContentPane().add(panel_1);
+		
+		JButton btnLoanCalculator = new JButton("Loan Calculator");
+		btnLoanCalculator.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				double InterestRate = Double.parseDouble(txtInterestRate.getText());
+				double monthlyInterestRate = InterestRate / 120;
+				int NumberOfYears = Integer.parseInt(txtNumberOfYears.getText());
+				double AmountOfLoan = Double.parseDouble(txtAmountOfLoan.getText());
+				//-------------------------------------------------------------------------------
+				double monthlyPayment = AmountOfLoan * monthlyInterestRate /(1 - 1 / Math.pow(1 + monthlyInterestRate,
+						NumberOfYears * 12));
+				String imonthlyPayment;
+				imonthlyPayment = Double.toString(monthlyPayment);
+				imonthlyPayment = String.format("$%.2f", monthlyPayment);
+				txtMonthlyPayment.setText(imonthlyPayment);
+				//-------------------------------------------------------------------------------
+				double totalPayment = monthlyPayment * NumberOfYears * 12;
+				String itotalPayment;
+				itotalPayment = String.format("$%.2f", totalPayment);
+				txtTotalPayment.setText(itotalPayment);
+			}
+		});
+		panel_1.add(btnLoanCalculator);
+		
+		JButton btnGenerateReceipt = new JButton("Generate Receipt");
+		btnGenerateReceipt.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+			String InterestRate = String.format(txtInterestRate.getText());
+			String numberOfYears = String.format(txtNumberOfYears.getText());
+			String AmountOfLoan = String.format(txtAmountOfLoan.getText());
+		
+			String monthlyPayment = String.format(txtMonthlyPayment.getText());
+			String totalPayment = String.format(txtTotalPayment.getText());
+		
+			//=====================================================================================
+			int refs = 1325 + (int) (Math.random() * 4238);
+			//=====================================================================================
+				Calendar timer = Calendar.getInstance();
+				timer.getTime();
+				SimpleDateFormat tTime = new SimpleDateFormat("HH:mm:ss");
+				tTime.format(timer.getTime());
+				SimpleDateFormat Tdate = new SimpleDateFormat("dd,MM,yyyy");
+				Tdate.format(timer.getTime());
+				
+			//=====================================================================================	
+		
+				txtReceipt.append("\tLoan Management Systems\n" + 
+			"Reference: \t\t\t" + refs + 
+			"\n===========================================\t " + 
+			"\nInterest rate: \t\t\t " + InterestRate +
+			"\n Repayment years: \t\t" + numberOfYears +
+			"\nAmount of Loan: \t\t\t " + "$" + AmountOfLoan +
+			"\nMonthly payment: \t\t" + monthlyPayment + 
+			"\nTotal payment: \t\t\t" + totalPayment +
+			
+					"\n=======================================\t " +
+					"\nDate: " + Tdate.format(timer.getTime()) +
+					"\t\tTime: " + tTime.format(timer.getTime()) +
+					"\n\n\t\tThank you\n");
+		
+				
+			}
+		});
+		panel_1.add(btnGenerateReceipt);
+		
+		JButton btnResetCalculator = new JButton("Reset Calculator");
+		btnResetCalculator.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				txtInterestRate.setText(null);
+				txtNumberOfYears.setText(null);
+				txtAmountOfLoan.setText(null);
+				txtMonthlyPayment.setText(null);
+				txtTotalPayment.setText(null);
+				txtReceipt.setText(null);
+			}
+		});
+		panel_1.add(btnResetCalculator);
+		
+		JButton btnExitCalculator = new JButton("Exit Calculator");
+		btnExitCalculator.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				frame = new JFrame("exit");
+				if(JOptionPane.showConfirmDialog(frame,"Confirm if you want to exit ", "Loan Management Systems", 
+						JOptionPane.YES_NO_OPTION)== JOptionPane.YES_NO_OPTION);
+				System.exit(0);
+			}
+		});
+		panel_1.add(btnExitCalculator);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBounds(516, 136, 453, 365);
+		frame.getContentPane().add(panel_2);
+		panel_2.setLayout(new BorderLayout(0,0));
+		
+		txtReceipt = new JTextArea();
+		txtReceipt.setBounds(292, 6, -285, 338);
+		panel_2.add(txtReceipt, BorderLayout.CENTER);
+		
+		JLabel lblInterestRate = new JLabel("Enter Interest Rate e.g 4.5");
+		lblInterestRate.setBounds(62, 168, 200, 35);
+		frame.getContentPane().add(lblInterestRate);
+		
+		JLabel lblEnter = new JLabel("Enter Number of Years e.g  4 as integer");
+		lblEnter.setBounds(62, 237, 264, 35);
+		frame.getContentPane().add(lblEnter);
+		
+		JLabel lblEnterAmount = new JLabel("Enter Amount of Loan ");
+		lblEnterAmount.setBounds(62, 303, 200, 35);
+		frame.getContentPane().add(lblEnterAmount);
+		
+		JLabel lblMonthlyPayment = new JLabel("Monthly Payment");
+		lblMonthlyPayment.setBounds(62, 368, 200, 35);
+		frame.getContentPane().add(lblMonthlyPayment);
+		
+		JLabel lblTotalPayment = new JLabel("Total Payment");
+		lblTotalPayment.setBounds(62, 432, 200, 35);
+		frame.getContentPane().add(lblTotalPayment);
+		
+		txtInterestRate = new JTextField();
+		txtInterestRate.setBounds(72, 199, 130, 26);
+		frame.getContentPane().add(txtInterestRate);
+		txtInterestRate.setColumns(10);
+		txtInterestRate.setColumns(10);
+		
+		txtNumberOfYears = new JTextField();
+		txtNumberOfYears.setColumns(10);
+		txtNumberOfYears.setBounds(72, 270, 130, 26);
+		frame.getContentPane().add(txtNumberOfYears);
+		txtInterestRate.setColumns(10);
+		
+		txtAmountOfLoan = new JTextField();
+		txtAmountOfLoan.setColumns(10);
+		txtAmountOfLoan.setBounds(72, 336, 130, 26);
+		frame.getContentPane().add(txtAmountOfLoan);
+		txtInterestRate.setColumns(10);
+		
+		txtMonthlyPayment = new JTextField();
+		txtMonthlyPayment.setColumns(10);
+		txtMonthlyPayment.setBounds(72, 403, 130, 26);
+		frame.getContentPane().add(txtMonthlyPayment);
+		txtInterestRate.setColumns(10);
+		
+		txtTotalPayment = new JTextField();
+		txtTotalPayment.setColumns(10);
+		txtTotalPayment.setBounds(72, 475, 130, 26);
+		frame.getContentPane().add(txtTotalPayment);
+		txtInterestRate.setColumns(10);
+	}
+}

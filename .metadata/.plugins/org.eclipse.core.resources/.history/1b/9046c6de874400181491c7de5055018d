@@ -1,0 +1,7 @@
+package Waves;
+
+import base.formulaBase;
+
+public class waves10 extends formulaBase{
+
+}

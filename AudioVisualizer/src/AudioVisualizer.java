@@ -1,0 +1,52 @@
+import ddf.minim.AudioPlayer;
+import ddf.minim.Minim;
+import ddf.minim.analysis.FFT;
+import processing.core.PApplet;
+import processing.core.PGraphics;
+import processing.core.PFont;
+import processing.event.*;
+public class AudioVisualizer extends PApplet {
+
+	Minim minim;
+	AudioPlayer song;
+	FFT fft;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		PApplet.main("AudioVisualizer");
+		
+	}
+public void settings(){
+	size(500,500);
+}
+public void setup(){
+	// start minim
+	minim = new Minim(this);
+	// create song object and play 
+	song = minim.loadFile("groove.mp3", 512);
+	 fft = new FFT(song.mix.size(), 44100);
+	 fft.window(fft.HAMMING);
+	song.play();
+	stroke(255);
+}
+public void draw(){
+	background(0);
+
+	float size = song.mix.level() * 400;
+	ellipse(width / 2, height / 2, size, size);
+	
+	 fft.forward(song.mix);
+	 for(int i = 0; i < fft.timeSize(); i++){
+	 line(i, height, i, height - fft.getBand(i) * 20);
+	 
+	 }
+}
+public void mousePressed(){
+	if(song.isPlaying()){
+		song.pause();
+	}
+	else{ 
+		song.play();
+	}
+}
+}

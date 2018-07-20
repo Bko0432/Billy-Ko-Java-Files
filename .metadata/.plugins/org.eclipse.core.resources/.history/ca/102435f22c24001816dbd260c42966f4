@@ -1,0 +1,58 @@
+package base;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import java.awt.Font;
+import javax.swing.JButton;
+import javax.swing.SwingConstants;
+
+public class GUI0 {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					GUI0 window = new GUI0();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public GUI0() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(0, 0, 700, 700);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblWelcomeToIb = new JLabel("Welcome to IB Physics Calculator ");
+		lblWelcomeToIb.setHorizontalAlignment(SwingConstants.CENTER);
+		lblWelcomeToIb.setFont(new Font("Tahoma", Font.BOLD, 24));
+		lblWelcomeToIb.setBounds(130, 318, 452, 95);
+		frame.getContentPane().add(lblWelcomeToIb);
+		
+		JButton btnClickNextButton = new JButton("Click Next");
+		btnClickNextButton.setBounds(275, 416, 144, 68);
+		frame.getContentPane().add(btnClickNextButton);
+	}
+}

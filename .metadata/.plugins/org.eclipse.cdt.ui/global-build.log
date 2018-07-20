@@ -1,0 +1,25 @@
+
+Invoking autoreconf in build directory: C:/Users/Billy/Documents/workspace/Test/
+
+
+Configuration failed with error
+(Cannot run program "sh" (in directory "C:\Users\Billy\Documents\workspace\Test"): CreateProcess error=2, The system cannot find the file specified)Build stopped
+()
+Invoking autoreconf in build directory: C:/Users/Billy/Documents/workspace/testCplusplus/
+
+
+Configuration failed with error
+(Cannot run program "sh" (in directory "C:\Users\Billy\Documents\workspace\testCplusplus"): CreateProcess error=2, The system cannot find the file specified)Build stopped
+()
+Invoking autoreconf in build directory: C:/Users/Billy/Documents/workspace/testc/
+
+
+Configuration failed with error
+(Cannot run program "sh" (in directory "C:\Users\Billy\Documents\workspace\testc"): CreateProcess error=2, The system cannot find the file specified)Build stopped
+()
+Invoking autoreconf in build directory: C:/Users/Billy/Documents/workspace/hi/
+
+
+Configuration failed with error
+(Cannot run program "sh" (in directory "C:\Users\Billy\Documents\workspace\hi"): CreateProcess error=2, The system cannot find the file specified)Build stopped
+()

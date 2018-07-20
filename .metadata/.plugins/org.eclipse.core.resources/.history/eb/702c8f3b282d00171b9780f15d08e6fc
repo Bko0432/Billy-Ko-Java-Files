@@ -1,0 +1,85 @@
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class GUI extends JFrame {
+private JPanel LeftPanel = new JPanel();
+private JPanel MainPanel = new JPanel();
+private JPanel TopLeft = new JPanel();
+private JPanel BottomLeft = new JPanel();
+private JPanel MiddleLeft = new JPanel();
+private JLabel Search = new JLabel();
+private JLabel AddSong = new JLabel();
+private JLabel Delete = new JLabel();
+private JLabel SearchResults = new JLabel();
+private JList <String> Results = new JList();
+private JTextField SearchField = new JTextField();
+private JTextField Title = new JTextField();
+private JTextField Genre = new JTextField();
+private JTextField Artist = new JTextField();
+private JTextField SongID = new JTextField();
+private JButton SearchButton = new JButton();
+private JButton Add = new JButton();
+private JButton DeleteButton = new JButton();
+private JLabel blank = new JLabel();
+private JLabel blank2 = new JLabel();
+
+
+public GUI(){
+	setTitle("MP3 Database");
+	setDefaultCloseOperation(EXIT_ON_CLOSE);
+	setLayout(new BorderLayout());
+	setResizable(true);
+	setSize(800,500);
+	add(LeftPanel, BorderLayout.WEST);
+	add(MainPanel, BorderLayout.CENTER);
+//Left Panel
+LeftPanel.setLayout(new BorderLayout());
+LeftPanel.add(TopLeft, BorderLayout.NORTH);
+LeftPanel.add(BottomLeft, BorderLayout.SOUTH);
+LeftPanel.add(MiddleLeft, BorderLayout.CENTER);
+
+//Top Left Panel
+TopLeft.setLayout(new GridLayout(2,3));
+TopLeft.add(Search);
+TopLeft.add(blank2);
+TopLeft.add(SearchField);
+TopLeft.add(SearchButton);
+Search.setText("Search");
+SearchButton.setText("Search");
+//Middle Left Panel 
+MiddleLeft.setLayout(new GridLayout(5,1));
+MiddleLeft.add(AddSong);
+AddSong.setText("Add Song");
+MiddleLeft.add(Title);
+MiddleLeft.add(Genre);
+MiddleLeft.add(Artist);
+MiddleLeft.add(Add);
+
+
+// Bottom Left Panel
+BottomLeft.setLayout(new GridLayout(2,3));
+BottomLeft.add(Delete);
+Delete.setText("Delete");
+BottomLeft.add(blank);
+BottomLeft.add(SongID);
+BottomLeft.add(DeleteButton);
+DeleteButton.setText("Delete");
+
+// Main Panel
+MainPanel.setLayout(new BorderLayout());
+MainPanel.add(SearchResults, BorderLayout.NORTH);
+SearchResults.setText("Search Result");
+MainPanel.add(Results, BorderLayout.CENTER);
+}
+
+
+	
+
+}

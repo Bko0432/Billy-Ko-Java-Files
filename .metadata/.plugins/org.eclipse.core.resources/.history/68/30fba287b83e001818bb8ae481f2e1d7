@@ -1,0 +1,209 @@
+package base;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+import javax.swing.DefaultComboBoxModel;
+
+import CircularMotion.*;
+import ElectricityandMagnetism.*;
+import ElectroMagneticInduction.*;
+import Motion.*;
+import ThermalPhysics.*;
+import Waves.*;
+import measurementsAndUncertainties.*;
+
+public class Logic {
+
+	 private Generate measurementsAndUncertainties;
+	    private Generate Motion;
+	    private Generate ThermalPhysics;
+	    private Generate Waves;
+	    private Generate ElectricityandMagnetism;
+	    private Generate CircularMotion;
+	    private Generate NuclearPhysics;
+	    private Generate EnergyProduction;
+	    private Generate SHM;
+	    private Generate Fields;
+	    private Generate ElectroMagneticInduction;
+	    private Generate QuantumandNuclearPhysics;
+	    private Generate Relativity;
+	    private Generate EngineeringPhysics;
+	    private Generate Imaging;
+	    
+	    private Generate currentFormulas;
+	    private int TopicNumber;
+	    private DefaultComboBoxModel dcm;
+	   private ArrayList<String> formulas;
+
+
+	    public int getTopicNumber() {
+			return TopicNumber;
+			
+			}
+		
+
+        public Logic()
+        {
+        	getStarted();
+        }
+
+
+		public DefaultComboBoxModel setTopicNumber(int topicNumber) {
+			TopicNumber = topicNumber;
+			
+			 switch(TopicNumber)
+			    {
+			    case 1:
+			    	currentFormulas = measurementsAndUncertainties;
+			    break;
+			    case 2:
+			    	currentFormulas = Motion;
+			    break;
+			    case 3:
+			    	currentFormulas = ThermalPhysics;
+			    break;
+			    case 4:
+			    	currentFormulas = Waves;
+			    break;
+			    case 5:
+			    	currentFormulas = ElectricityandMagnetism;
+			    break;
+			    case 6:
+			    	currentFormulas = CircularMotion;
+			    break;
+			    case 7:
+			    	currentFormulas = NuclearPhysics;
+			    	break;
+			    case 8:
+			    	currentFormulas = EnergyProduction;
+			    break;
+			    case 9:
+			    	currentFormulas = SHM;
+			    break;
+			    case 10: 
+			    	currentFormulas = Fields;
+			    break;
+			    case 11:
+			    	currentFormulas = ElectroMagneticInduction;
+			    	break;
+			    case 12:
+			    	currentFormulas = QuantumandNuclearPhysics;
+			    	break;
+			    case 13:
+			    	currentFormulas = Relativity;
+			    	break;
+			    case 14: 
+			    	currentFormulas = EngineeringPhysics;
+			    	 break;
+			    case 15: 
+			    	currentFormulas = Imaging;
+			    	break;
+			 
+			
+			 
+			    }
+			
+			 formulas = new ArrayList();
+			 for(int x = 0; x < currentFormulas.getFormulas().size(); x++){
+				 formulas.add(currentFormulas.getFormulas().get(x).getFormula().get(0));	
+				
+			 }
+			 dcm = new DefaultComboBoxModel(formulas.toArray());
+			 
+			return dcm;
+		}
+
+
+		   public formulaBase getFormulas (int formulaNumber)
+		   {
+			   return currentFormulas.getFormulas().get(formulaNumber);
+		   }
+
+		   public String getStringFormula (formulaBase formula, int reArrangeNumber)
+		   {
+			   return formula.getFormula().get(reArrangeNumber);
+		   }
+
+		   public String getVariableName (formulaBase formula, int number)
+		   {
+			   return formula.getAllVariables().get(number);
+		   }
+		   
+		   public int getNumVariables(formulaBase formula){
+			   return formula.getAllVariables().size();
+		   }
+		private void getStarted(){
+	        measurementsAndUncertainties = new Generate();
+	        measurementsAndUncertainties.addFormulas (new uncertaintiesAndErrors1());
+	        measurementsAndUncertainties.addFormulas (new uncertaintiesAndErrors2());
+	        measurementsAndUncertainties.addFormulas (new uncertaintiesAndErrors3());
+
+	        measurementsAndUncertainties.addFormulas(new vectorsAndScalars1());
+	        measurementsAndUncertainties.addFormulas(new vectorsAndScalars2());
+
+	        Motion = new Generate();
+	        Motion.addFormulas(new motion1());
+	        Motion.addFormulas(new motion2());
+	        Motion.addFormulas(new motion3());
+	        Motion.addFormulas(new motion4());
+	        Motion.addFormulas(new motion5());
+	        Motion.addFormulas(new motion6());
+	        Motion.addFormulas(new motion7());
+	        Motion.addFormulas(new motion8());
+	        Motion.addFormulas(new motion9());
+	        Motion.addFormulas(new motion10());
+	        Motion.addFormulas(new motion11());
+	        Motion.addFormulas(new motion12());
+	        Motion.addFormulas(new motion13());
+	        Motion.addFormulas(new motion14());
+	        Motion.addFormulas(new motion15());
+	        Motion.addFormulas(new motion16());
+	        Motion.addFormulas(new motion17());
+	        Motion.addFormulas(new motion18());
+
+	        ThermalPhysics = new Generate();
+	        ThermalPhysics.addFormulas(new thermal1());
+	        ThermalPhysics.addFormulas(new thermal2());
+	        ThermalPhysics.addFormulas(new thermal3());
+	        ThermalPhysics.addFormulas(new thermal4());
+
+	        Waves = new Generate();
+	        Waves.addFormulas(new waves1());
+	        Waves.addFormulas(new waves2());
+	        Waves.addFormulas(new waves3());
+	        Waves.addFormulas(new waves4());
+	        Waves.addFormulas(new waves5());
+	        Waves.addFormulas(new waves6());
+	        Waves.addFormulas(new waves7());
+	        Waves.addFormulas(new waves8());
+
+	        ElectricityandMagnetism = new Generate();
+	        ElectricityandMagnetism.addFormulas(new electricity1());
+	        ElectricityandMagnetism.addFormulas(new electricity2());
+	        ElectricityandMagnetism.addFormulas(new electricity3());
+	        ElectricityandMagnetism.addFormulas(new electricity4());
+	        ElectricityandMagnetism.addFormulas(new electricity5());
+	        ElectricityandMagnetism.addFormulas(new electricity6());
+	        ElectricityandMagnetism.addFormulas(new electricity7());
+	        ElectricityandMagnetism.addFormulas(new electricity8());
+	        ElectricityandMagnetism.addFormulas(new electricity9());
+	        ElectricityandMagnetism.addFormulas(new electricity10());
+	        ElectricityandMagnetism.addFormulas(new electricity11());
+	        ElectricityandMagnetism.addFormulas(new electricity12());
+	        ElectricityandMagnetism.addFormulas(new magnetism1());
+	        ElectricityandMagnetism.addFormulas(new magnetism2());
+
+	        CircularMotion = new Generate();
+	        CircularMotion.addFormulas(new circular1());
+	        CircularMotion.addFormulas(new circular2());
+	        CircularMotion.addFormulas(new circular3());
+	        CircularMotion.addFormulas(new circular4());
+	        CircularMotion.addFormulas(new circular5());
+	        CircularMotion.addFormulas(new circular6());
+	        
+	        
+	        
+	    }
+
+}

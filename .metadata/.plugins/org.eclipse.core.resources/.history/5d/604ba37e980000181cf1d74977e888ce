@@ -1,0 +1,169 @@
+package base;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import javax.swing.BoxLayout;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class GUI {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					GUI window = new GUI();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public GUI() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(1000, 1000, 1000,1000);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel IBPhysicsCalculator = new JPanel();
+		IBPhysicsCalculator.setBounds(12, 13, 958, 67);
+		frame.getContentPane().add(IBPhysicsCalculator);
+		
+		JLabel lblIbPhysicsCalculator = new JLabel("IB Physics Calculator");
+		lblIbPhysicsCalculator.setFont(new Font("Tahoma", Font.BOLD, 40));
+		IBPhysicsCalculator.add(lblIbPhysicsCalculator);
+		
+		JLabel lblSelectTopics = new JLabel("Select Topics");
+		lblSelectTopics.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblSelectTopics.setBounds(228, 91, 157, 32);
+		frame.getContentPane().add(lblSelectTopics);
+		
+		JButton btnMeasurementsandUncertainties = new JButton("Topic 1: Measurements and Uncertainties ");
+		btnMeasurementsandUncertainties.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnMeasurementsandUncertainties.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			
+			}
+		});
+		btnMeasurementsandUncertainties.setBounds(26, 136, 249, 94);
+		frame.getContentPane().add(btnMeasurementsandUncertainties);
+		
+		JButton btnMotionmechanics = new JButton("Topic 2: Motion/Mechanics");
+		btnMotionmechanics.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnMotionmechanics.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+		
+				}
+		});
+		btnMotionmechanics.setBounds(26, 264, 249, 94);
+		frame.getContentPane().add(btnMotionmechanics);
+		
+		JButton btnThermalPhysics = new JButton("Topic 3: Thermal Physics");
+		btnThermalPhysics.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnThermalPhysics.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnThermalPhysics.setBounds(26, 378, 249, 85);
+		frame.getContentPane().add(btnThermalPhysics);
+		
+		JButton btnWaves = new JButton("Topic 4: Waves");
+		btnWaves.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnWaves.setBounds(26, 497, 249, 79);
+		frame.getContentPane().add(btnWaves);
+		
+		JButton btnElectricityandMagnetism = new JButton("Topic 5: Electricity and Magnetism");
+		btnElectricityandMagnetism.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnElectricityandMagnetism.setBounds(26, 597, 249, 94);
+		frame.getContentPane().add(btnElectricityandMagnetism);
+		
+		JButton btnCircularMotionandGravitation = new JButton("Topic 6: Circular Motion and Gravitation");
+		btnCircularMotionandGravitation.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnCircularMotionandGravitation.setBounds(26, 709, 249, 94);
+		frame.getContentPane().add(btnCircularMotionandGravitation);
+		
+		JButton btnAtomicParticleandNuclearPhysics = new JButton("Topic 7: Atomic, Particle and Nuclear Physics");
+		btnAtomicParticleandNuclearPhysics.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnAtomicParticleandNuclearPhysics.setBounds(26, 824, 249, 94);
+		frame.getContentPane().add(btnAtomicParticleandNuclearPhysics);
+		
+		JButton btnEnergyProduction = new JButton("Topic 8: Energy Production");
+		btnEnergyProduction.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnEnergyProduction.setBounds(287, 138, 249, 94);
+		frame.getContentPane().add(btnEnergyProduction);
+		
+		JButton btnWavePhenomena = new JButton("Topic 9: Wave Phenomena");
+		btnWavePhenomena.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnWavePhenomena.setBounds(287, 264, 249, 94);
+		frame.getContentPane().add(btnWavePhenomena);
+		
+		JButton btnFields = new JButton("Topic 10: Fields");
+		btnFields.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnFields.setBounds(287, 378, 249, 85);
+		frame.getContentPane().add(btnFields);
+		
+		JButton btnElectromagneticInduction = new JButton("Topic 11: Electromagnetic Induction");
+		btnElectromagneticInduction.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnElectromagneticInduction.setBounds(287, 497, 249, 79);
+		frame.getContentPane().add(btnElectromagneticInduction);
+		
+		JButton btnQuantumandNuclearPhysics = new JButton("Topic 12: Quantum and Nuclear Physics");
+		btnQuantumandNuclearPhysics.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnQuantumandNuclearPhysics.setBounds(287, 597, 249, 94);
+		frame.getContentPane().add(btnQuantumandNuclearPhysics);
+		
+		JLabel lblOptions = new JLabel("Options");
+		lblOptions.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblOptions.setBounds(711, 93, 157, 32);
+		frame.getContentPane().add(lblOptions);
+		
+		JButton btnOptionBEngineeringPhysics = new JButton("Option B: Engineering Physics");
+		btnOptionBEngineeringPhysics.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnOptionBEngineeringPhysics.setBounds(619, 274, 249, 94);
+		frame.getContentPane().add(btnOptionBEngineeringPhysics);
+		
+		JButton btnOptionARelativity = new JButton("Option A: Relativity");
+		btnOptionARelativity.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnOptionARelativity.setBounds(619, 152, 249, 94);
+		frame.getContentPane().add(btnOptionARelativity);
+		
+		JButton btnOptionCImaging = new JButton("Option C: Imaging");
+		btnOptionCImaging.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		btnOptionCImaging.setBounds(619, 392, 249, 94);
+		frame.getContentPane().add(btnOptionCImaging);
+		
+		JButton btnNextPage = new JButton("Next Page");
+		btnNextPage.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnMeasurementsandUncertainties.doClick();
+				
+				
+			}
+		});
+		btnNextPage.setBounds(660, 753, 157, 50);
+		frame.getContentPane().add(btnNextPage);
+	}
+}

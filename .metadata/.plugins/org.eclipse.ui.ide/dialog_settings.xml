@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\Billy\Documents\workspace\WriteSpaces"/>
+		<item value="C:\Users\Billy\Documents\workspace\TryCatchMethodBasic"/>
+		<item value="C:\Users\Billy\Documents\workspace\TicTacToe2"/>
+		<item value="C:\Users\Billy\Documents\workspace\TicTacToe"/>
+		<item value="C:\Users\Billy\Documents\workspace\The Full Text of Tool"/>
+		<item value="C:\Users\Billy\Documents\workspace\Tetris"/>
+		<item value="C:\Users\Billy\Documents\workspace\Switch"/>
+		<item value="C:\Users\Billy\Documents\workspace\Sum"/>
+		<item value="C:\Users\Billy\Documents\workspace\StringTryCatch"/>
+		<item value="C:\Users\Billy\Documents\workspace\Stack and Queues"/>
+		<item value="C:\Users\Billy\Documents\workspace\Sorting"/>
+		<item value="C:\Users\Billy\Documents\workspace\Snake"/>
+		<item value="C:\Users\Billy\Documents\workspace\ReturnValues"/>
+		<item value="C:\Users\Billy\Documents\workspace\RemoveDuplicates"/>
+		<item value="C:\Users\Billy\Documents\workspace\RandomAccessFile"/>
+		<item value="C:\Users\Billy\Documents\workspace\PuzzleGame"/>
+		<item value="C:\Users\Billy\Documents\workspace\PrimeFinder"/>
+		<item value="C:\Users\Billy\Documents\workspace\Practice"/>
+		<item value="C:\Users\Billy\Documents\workspace\PiePanel"/>
+		<item value="C:\Users\Billy\Documents\workspace\PieGraph"/>
+		<item value="C:\Users\Billy\Documents\workspace\PieFrame"/>
+		<item value="C:\Users\Billy\Documents\workspace\PieChart"/>
+		<item value="C:\Users\Billy\Documents\workspace\PhysicsFormulasCalculator"/>
+		<item value="C:\Users\Billy\Documents\workspace\ParkFee"/>
+		<item value="C:\Users\Billy\Documents\workspace\Pacman"/>
+		<item value="C:\Users\Billy\Documents\workspace\OOP Package"/>
+		<item value="C:\Users\Billy\Documents\workspace\MyFirstRecursion"/>
+		<item value="C:\Users\Billy\Documents\workspace\MyFirstArrayList"/>
+		<item value="C:\Users\Billy\Documents\workspace\MyFirst2Darray"/>
+		<item value="C:\Users\Billy\Documents\workspace\MyBasicImplementations"/>
+		<item value="C:\Users\Billy\Documents\workspace\MultipleDuplicate"/>
+		<item value="C:\Users\Billy\Documents\workspace\Mod"/>
+		<item value="C:\Users\Billy\Documents\workspace\Missing"/>
+		<item value="C:\Users\Billy\Documents\workspace\MailWriter"/>
+		<item value="C:\Users\Billy\Documents\workspace\LottoMadness"/>
+		<item value="C:\Users\Billy\Documents\workspace\HelloWorld"/>
+		<item value="C:\Users\Billy\Documents\workspace\GUISample"/>
+		<item value="C:\Users\Billy\Documents\workspace\For 1"/>
+		<item value="C:\Users\Billy\Documents\workspace\FileProcessing"/>
+		<item value="C:\Users\Billy\Documents\workspace\EnhanceLoop"/>
+		<item value="C:\Users\Billy\Documents\workspace\Duplicate"/>
+		<item value="C:\Users\Billy\Documents\workspace\DiceRoll"/>
+		<item value="C:\Users\Billy\Documents\workspace\CreativeCodesProject"/>
+		<item value="C:\Users\Billy\Documents\workspace\Conversation"/>
+		<item value="C:\Users\Billy\Documents\workspace\Constructors"/>
+		<item value="C:\Users\Billy\Documents\workspace\Conditional PRAC"/>
+		<item value="C:\Users\Billy\Documents\workspace\Conditional"/>
+		<item value="C:\Users\Billy\Documents\workspace\ColorSliders"/>
+		<item value="C:\Users\Billy\Documents\workspace\CodePackage1"/>
+		<item value="C:\Users\Billy\Documents\workspace\CarProject"/>
+		<item value="C:\Users\Billy\Documents\workspace\Book Shelf"/>
+		<item value="C:\Users\Billy\Documents\workspace\BinarySearchTree"/>
+		<item value="C:\Users\Billy\Documents\workspace\ArraySearch"/>
+		<item value="C:\Users\Billy\Documents\workspace\ArrayReverse"/>
+		<item value="C:\Users\Billy\Documents\workspace\ArrayAdd"/>
+		<item value="C:\Users\Billy\Documents\workspace\Array2"/>
+		<item value="C:\Users\Billy\Documents\workspace\Array1"/>
+		<item value="C:\Users\Billy\Documents\workspace\Android"/>
+		<item value="C:\Users\Billy\Documents\workspace\A"/>
+	</list>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+			<item value="org.eclipse.ui.workbenchTransfer"/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="361" key="DIALOG_X_ORIGIN"/>
+		<item value="170" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

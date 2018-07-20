@@ -1,0 +1,83 @@
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class GUI extends JFrame {
+private JPanel LeftPanel;
+private JPanel MainPanel;
+private JPanel TopLeft;
+private JPanel BottomLeft;
+private JPanel MiddleLeft;
+private JLabel Search;
+private JLabel AddSong;
+private JLabel Delete;
+private JLabel SearchResults;
+private JList <String> Results;
+private JTextField SearchField;
+private JTextField Title;
+private JTextField Genre;
+private JTextField Artist;
+private JTextField SongID;
+private JButton SearchButton;
+private JButton Add;
+private JButton DeleteButton;
+
+
+public GUI(){
+	setTitle("MP3 Database");
+	setSize(500,200);
+	setDefaultCloseOperation(EXIT_ON_CLOSE);
+	setLayout(new BorderLayout());
+	setResizable(true);
+//Left Panel
+LeftPanel.setLayout(new BorderLayout());
+LeftPanel.add(TopLeft, BorderLayout.NORTH);
+LeftPanel.add(BottomLeft, BorderLayout.SOUTH);
+LeftPanel.add(MiddleLeft, BorderLayout.CENTER);
+
+//Top Left Panel
+TopLeft.setLayout(new GridLayout(3,1));
+TopLeft.add(Search);
+TopLeft.add(SearchField);
+TopLeft.add(SearchButton);
+Search.setText("Search");
+//Middle Left Panel 
+MiddleLeft.setLayout(new GridLayout(1,5));
+MiddleLeft.add(AddSong);
+AddSong.setText("Add Song");
+MiddleLeft.add(Title);
+MiddleLeft.add(Genre);
+MiddleLeft.add(Artist);
+MiddleLeft.add(Add);
+
+
+// Bottom Left Panel
+BottomLeft.setLayout(new GridLayout(3,1));
+BottomLeft.add(Delete);
+Delete.setText("Delete");
+BottomLeft.add(SongID);
+BottomLeft.add(DeleteButton);
+
+// Main Panel
+MainPanel.setLayout(new BorderLayout());
+MainPanel.add(SearchResults, BorderLayout.NORTH);
+SearchResults.setText("Search Result");
+MainPanel.add(Results, BorderLayout.CENTER);
+setVisible(true);
+
+
+
+
+
+}
+
+
+	
+
+}

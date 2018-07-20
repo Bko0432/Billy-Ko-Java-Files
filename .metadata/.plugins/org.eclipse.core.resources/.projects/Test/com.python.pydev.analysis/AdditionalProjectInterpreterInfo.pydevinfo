@@ -1,0 +1,36 @@
+-- VERSION_5
+-- START DISKCACHE_2
+C:\Users\Billy\Documents\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\Test\com.python.pydev.analysis\v2_indexcache
+a|1527326592747267000|C:\Users\Billy\Documents\workspace\Test\a.py
+Test|1525508159464756000|C:\Users\Billy\Documents\workspace\Test\Test.py
+Modules|1527326382070464000|C:\Users\Billy\Documents\workspace\Test\Modules.py
+Functions|1527325552107442000|C:\Users\Billy\Documents\workspace\Test\Functions.py
+Test2|1527323496415398000|C:\Users\Billy\Documents\workspace\Test\Test2.py
+-- END DISKCACHE
+-- START DICTIONARY
+8
+4=Test
+8=Modules
+1=C:\Users\Billy\Documents\workspace\Test\Test2.py
+3=C:\Users\Billy\Documents\workspace\Test\Test.py
+6=Functions
+7=C:\Users\Billy\Documents\workspace\Test\Modules.py
+2=Test2
+5=C:\Users\Billy\Documents\workspace\Test\Functions.py
+-- END DICTIONARY
+-- START TREE 1
+10
+a|1|a!1^4#1*19@
+b|1|b!1^5#1*19@
+bil|1|Billy!3^2#1*35@
+cou|2|countEven!1^34#1*19@countOdd!1^35#1*19@
+dat|1|data!1^48#5*19@
+fib|1|fibo!5^9#5*50@
+gan|1|Ganza!7^2#5*66@
+kar|1|karlos!5^20#5*50@
+lis|3|list1!3^9#1*35@list3!3^11#1*35@list2!3^10#1*35@
+roi|2|Rois!3^3#1*35@Rois!5^2#5*50@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

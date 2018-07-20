@@ -1,0 +1,13 @@
+package base;
+
+public class Driver {
+ public static void main (String[] args)
+ {
+	 GUI gui = new GUI();
+	 gui.setVisible(true);
+	 GUI2 gui2 = new GUI2();
+	// gui2.setVisible(false);
+	 Logic logic = new Logic();
+	 Controller control = new Controller(gui, gui2, logic);
+ }
+}

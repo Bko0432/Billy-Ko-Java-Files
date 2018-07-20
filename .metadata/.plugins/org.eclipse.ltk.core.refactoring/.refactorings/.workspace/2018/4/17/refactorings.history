@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;IBPhysicsFormulaBookletCalculator&apos; to &apos;PFBC(PhysicsFormulaBookletCalculator)&apos;&#x0D;&#x0A;- Original element: &apos;IBPhysicsFormulaBookletCalculator&apos;&#x0D;&#x0A;- Renamed element: &apos;IBPhysicsFormulaBookletCalculator&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;IBPhysicsFormulaBookletCalculator&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=IBPhysicsFormulaBookletCalculator" name="PFBC(PhysicsFormulaBookletCalculator)" references="true" stamp="1524885713976" version="1.0"/>
+</session>
